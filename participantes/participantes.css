@@ -25,7 +25,6 @@ body{
     background-color: #004222;
     box-shadow: 0.5rem 0.5rem 1rem #babecc,
                 -0.5rem -0.5rem 1rem #ffffff;
-    border-radius: 0rem 0rem 1.5rem 1.5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -36,6 +35,7 @@ body{
     display: flex;
     height: 10vh;
     justify-content: space-between;
+    align-items: start;
 }
 
 #inferior{
@@ -121,7 +121,6 @@ body{
     background-color: #004222;
     box-shadow: -0.5rem -0.5rem 1rem #babecc,
                 0.5rem 0.5rem 1rem #ffffff;
-    border-radius: 2rem 2rem 0rem 0rem;
     justify-content: space-around;
 }
 

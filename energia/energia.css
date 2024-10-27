@@ -15,7 +15,7 @@ body{
                         "corpo"
                         "rodape";
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 70vh 15vh;
+    grid-template-rows: 15vh auto 15vh;
 }
 
 #cabecalho{
@@ -25,7 +25,6 @@ body{
     background-color: #004222;
     box-shadow: 0.5rem 0.5rem 1rem #babecc,
                 -0.5rem -0.5rem 1rem #ffffff;
-    border-radius: 0rem 0rem 1.5rem 1.5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -36,6 +35,7 @@ body{
     display: flex;
     height: 10vh;
     justify-content: space-between;
+    align-items: start;
 }
 
 #inferior{
@@ -73,6 +73,22 @@ body{
     filter: drop-shadow(0.1rem 0.1rem 0.75rem white);
 }
 
+#corpo{
+    grid-area: corpo;
+    display: flex;
+}
+
+#calc h1{
+    border-bottom: 0.2rem black solid;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.menor{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 #rodape{
     display: flex;
     flex-direction: column;
@@ -80,7 +96,6 @@ body{
     background-color: #004222;
     box-shadow: -0.5rem -0.5rem 1rem #babecc,
                 0.5rem 0.5rem 1rem #ffffff;
-    border-radius: 2rem 2rem 0rem 0rem;
     justify-content: space-around;
 }
 
