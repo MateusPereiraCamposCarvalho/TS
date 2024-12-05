@@ -45,11 +45,11 @@ function consumoagua() {
         ideal[2] = 800
         ideal[3] = 1350
         ideal[4] = 350
-        nome[0] = "Gasto com banhos:"
-        nome[1] = "Gasto lavando roupas:"
-        nome[2] = "Gasto lavando louça:"
-        nome[3] = "Gasto com descargas:"
-        nome[4] = "Gasto regando o jardim:"
+        nome[0] = " com banhos"
+        nome[1] = "  lavando roupas"
+        nome[2] = " lavando louças"
+        nome[3] = " com descargas"
+        nome[4] = " regando o jardim"
         //armazenar
         //pessoas
         var qntPessoas = parseInt(document.getElementById("ndepessoas").value)
@@ -126,6 +126,7 @@ function consumoagua() {
 
         for (var i = 0; i < 5; i++) {
             gasto[i] = gasto[i] / qntPessoas
+            gasto[i] = parseInt(gasto[i])
         }
         for (var i = 0; i < 5; i++) {
             if (gasto[i] > ideal[i]) {
@@ -142,10 +143,11 @@ function consumoagua() {
             var texto2 = document.querySelectorAll("li")
             for (i = 0; i < 5; i++) {
                 if (consumo[i] == "ruim") {
-                    texto2[i].textContent = nome[i] + " está acima da média recomendada pela ONU."
+                    texto2[i].textContent = "Em média, cada pessoa em sua casa gasta " + gasto[i] + " litros  " + nome[i] + " e esse valor está acima da média recomendada "
                     texto2[i].removeAttribute("class", "invisivel")
                     texto2[i].setAttribute("class", "visivel")
                 } else {
+                    texto2[i].textContent = "Em média, cada pessoa em sua casa gasta " + gasto[i] + " litros  " + nome[i] + " e esse valor está na média recomendada "
                     texto2[i].removeAttribute("class", "invisivel")
                 }
             }
@@ -153,10 +155,11 @@ function consumoagua() {
             var texto2 = document.querySelectorAll("li")
             for (i = 0; i < 4; i++) {
                 if (consumo[i] == "ruim") {
-                    texto2[i].textContent = nome[i] + " está acima da média recomendada pela ONU."
+                    texto2[i].textContent = "Em média, cada pessoa em sua casa gasta " + gasto[i] + " litros  " + nome[i] + " e esse valor está acima da média recomendada "
                     texto2[i].removeAttribute("class", "invisivel")
                     texto2[i].setAttribute("class", "visivel")
                 } else {
+                     texto2[i].textContent = "Em média, cada pessoa em sua casa gasta " + gasto[i] + " litros  " + nome[i] + " e esse valor está na média recomendada " 
                     texto2[i].removeAttribute("class", "invisivel")
                 }
             }
