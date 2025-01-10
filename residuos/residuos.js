@@ -25,7 +25,7 @@ function producaolixo() {
 
         var lixoano = ((qntlixo * 12) * 100) / 80000000
         var texto2 = document.querySelector(".invisivel2")
-        texto2.textContent = "E esse valor representa, aproximadamente, " + lixoano + "% do lixo produzido no Brasil em um ano."
+        texto2.textContent = "E esse valor representa, aproximadamente, " + lixoano.toFixed(5) + "% do lixo produzido no Brasil em um ano."
         texto2.removeAttribute("class", "invisivel2")
 
         if (recicla == 1) {

@@ -27,7 +27,7 @@
                 <div id="calc">
                     <h1>Consumo médio de energia</h1>
                 </div>
-                <form action="#" method="post">
+                <form action="#" method="post" id="formulario">
                     <div class="row form-group">
                         <div class="col-md-12">
                             <label for="ndepessoas"><b>Quantas pessoas moram na sua casa?</b></label>
@@ -59,15 +59,15 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="pequena" name="tamgeladeira" class="form-check-input" value="pequena">
+                                    <input type="radio" id="pequena" name="tamgeladeira" class="form-check-input" value="1">
                                     <label for="pequena" class="form-check-label">Pequena (entre 100 e 200 litros)</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="media" name="tamgeladeira" class="form-check-input" value="media">
+                                    <input type="radio" id="media" name="tamgeladeira" class="form-check-input" value="2">
                                     <label for="media" class="form-check-label">Média (entre 200 e 400 litros)</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="grande" name="tamgeladeira" class="form-check-input" value="grande">
+                                    <input type="radio" id="grande" name="tamgeladeira" class="form-check-input" value="3">
                                     <label for="grande" class="form-check-label">Grande (acima de 400 litros)</label>
                                 </div>
                             </div>
@@ -104,15 +104,15 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="led" name="tamtv" class="form-check-input" value="led">
+                                    <input type="radio" id="led" name="tamtv" class="form-check-input" value="1">
                                     <label for="led" class="form-check-label">LED</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="qled" name="tamtv" class="form-check-input" value="qled">
+                                    <input type="radio" id="qled" name="tamtv" class="form-check-input" value="2">
                                     <label for="qled" class="form-check-label">QLED</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="oled" name="tamtv" class="form-check-input" value="oled">
+                                    <input type="radio" id="oled" name="tamtv" class="form-check-input" value="3">
                                     <label for="oled" class="form-check-label">OLED</label>
                                 </div>
                             </div>
@@ -224,15 +224,15 @@
                         <div class="row form-group">
                             <div class="col-md-6">
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="incan" name="lampada" class="form-check-input" value="incan">
+                                    <input type="radio" id="incan" name="lampada" class="form-check-input" value="1">
                                     <label for="incan" class="form-check-label">Incandescente</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="fluo" name="lampada" class="form-check-input" value="fluo">
+                                    <input type="radio" id="fluo" name="lampada" class="form-check-input" value="2">
                                     <label for="fluo" class="form-check-label">Fluorecente</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" id="lampdeled" name="lampada" class="form-check-input" value="lampdeled">
+                                    <input type="radio" id="lampdeled" name="lampada" class="form-check-input" value="3">
                                     <label for="lampdeled" class="form-check-label">LED</label>
                                 </div>
                             </div>
@@ -281,11 +281,40 @@
                     <div class="row form-group">
                         <div class="col-md-12">
                             <div class="float-right">
-                                <button type="button" class="btn btn-success">Enviar</button>
+                                <button type="button" class="btn btn-success" onclick="consumoluz()">Enviar</button>
+                            </div>
+                            <div class="float-left">
+                                <button type="button" class="btn btn-danger"
+                                    onclick=location.reload()>Recarregar</button>
                             </div>
                         </div>
                     </div>
                 </form>
+                <div class="invisivel">
+                    <p> Utilizamos a média de consumo de energia das situações anteriores para estimar o consumo em
+                        diferentes cenários. Em seguida, comparamos esses valores com as recomendações estabelecidas
+                        pela Agência Nacional de Energia Elétrica (ANEEL).</p>
+                </div>
+
+                <div id="texto2" class="invisivel">
+                    <p></p>
+                </div>
+                <br>
+                <div id="texto3" class="invisivel">
+                    <p>Aqui está seu gasto médio com cada atividade:</p>
+                </div>
+
+                <ul>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                    <li class="invisivel">pela ONU.</li>
+                </ul>
+                <h5 class="invisivel">Siga nossas dicas para reduzir e/ou manter seu consumo de água dentro dos padrões
+                    sustentáveis.</h5>
             </div>
         </div>
         <div id="rodape">
@@ -301,6 +330,10 @@
     </div>
     <script type="text/javascript" src="bootstrap/js/jquery.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="energia/energia.js"></script>
 </body>
 </html>
