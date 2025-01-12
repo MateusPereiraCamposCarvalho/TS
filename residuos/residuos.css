@@ -15,7 +15,7 @@ body {
         "corpo"
         "rodape";
     grid-template-columns: 100%;
-    grid-template-rows: 14vh 94vh 14vh;
+    grid-template-rows: 14vh 97vh 14vh;
 }
 
 #cabecalho {
@@ -171,6 +171,17 @@ ul{
     #superior {
         display: none;
     }
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 140vh 14vh;
+    }
+    
 }
 
 @media (max-width: 545px) {
@@ -217,4 +228,65 @@ ul{
         font-size: 0.9rem;
         font-weight: bold;
     }
+}
+
+
+@media (max-width: 426px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 180vh 14vh;
+    }
+
+
+}
+
+@media (max-width: 391px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 155vh 14vh;
+    }
+
+
+}
+
+@media (max-width: 376px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 202vh 14vh;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 247vh 14vh;
+    }
+
 }
