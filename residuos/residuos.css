@@ -154,6 +154,21 @@ ul{
     margin-left: 1em;
 }
 
+@media (max-width: 992) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 200vh 14vh;
+    }
+
+
+}
 
 @media (max-width: 790px) {
     #inferior {
@@ -184,6 +199,22 @@ ul{
     
 }
 
+@media (max-width: 992px) and (min-width: 789px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 105vh 14vh;
+    }
+
+
+}
+
 @media (max-width: 768px) {
   
 
@@ -194,7 +225,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 175vh 14vh;
+        grid-template-rows: 14vh 140vh 14vh;
     }
 
 
