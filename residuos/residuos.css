@@ -15,7 +15,7 @@ body {
         "corpo"
         "rodape";
     grid-template-columns: 100%;
-    grid-template-rows: 14vh 97vh 14vh;
+    grid-template-rows: 14vh 99vh 14vh;
 }
 
 #cabecalho {
@@ -154,7 +154,7 @@ ul{
     margin-left: 1em;
 }
 
-@media (max-width: 992) {
+@media (max-width: 992px) {
   
 
     #conteiner {
