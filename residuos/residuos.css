@@ -184,6 +184,22 @@ ul{
     
 }
 
+@media (max-width: 768px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 140vh 14vh;
+    }
+
+
+}
+
 @media (max-width: 545px) {
     #superior {
         display: none;
