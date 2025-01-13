@@ -225,7 +225,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 142vh 14vh;
+        grid-template-rows: 14vh 130vh 14vh;
     }
 
 
@@ -277,6 +277,21 @@ ul{
     }
 }
 
+@media (max-width: 544px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 120vh 14vh;
+    }
+
+
+}
 
 @media (max-width: 426px) {
   
