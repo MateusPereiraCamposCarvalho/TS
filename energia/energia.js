@@ -119,7 +119,8 @@ function consumoluz() {
             simnao[5] = 1
             var tpcond = parseInt(document.getElementById("qar").value)
             var ptcond = parseInt(document.getElementById("potenciaar").value)
-            gasto[5] = tpcond * ptcond
+            var numar = parseInt(document.getElementById("numar").value)
+            gasto[5] = tpcond * ptcond * numar 
             tem[5] = true
         }
 
@@ -190,7 +191,7 @@ function consumoluz() {
             }
         }
         if (qntPessoas == 3 || qntPessoas == 4) {
-            var texto2 = document.querySelectorAll("li")
+            var texto2 = document.querySelector("#texto2")
             if (consumo[0] == "ruim") {
                     texto2.textContent = nome[1] + " está acima da média recomendada pela ANEEL."
                     texto2.removeAttribute("class", "invisivel")
@@ -201,7 +202,7 @@ function consumoluz() {
             }
         }
         if (qntPessoas >= 5) {
-            var texto2 = document.querySelectorAll("li")
+            var texto2 = document.querySelector("#texto2")
             if (consumo[0] == "ruim") {
                     texto2.textContent = nome[2] + " está acima da média recomendada pela ANEEL."
                     texto2.removeAttribute("class", "invisivel")
@@ -227,6 +228,5 @@ function consumoluz() {
 
         var texto5 = document.querySelector("h5")
         texto5.removeAttribute("class", "invisivel")
-        alert (texto5)
     }
 }
