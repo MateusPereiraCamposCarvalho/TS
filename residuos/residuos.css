@@ -179,7 +179,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 140vh 14vh;
+        grid-template-rows: 14vh 145vh 14vh;
     }
     
 }
@@ -196,7 +196,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 125vh 14vh;
+        grid-template-rows: 14vh 135vh 14vh;
     }
 
 
@@ -241,7 +241,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 180vh 14vh;
+        grid-template-rows: 14vh 188vh 14vh;
     }
 
 
@@ -257,7 +257,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 155vh 14vh;
+        grid-template-rows: 14vh 160vh 14vh;
     }
 
 
@@ -272,7 +272,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 202vh 14vh;
+        grid-template-rows: 14vh 207vh 14vh;
     }
 
 }
@@ -286,7 +286,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 247vh 14vh;
+        grid-template-rows: 14vh 252vh 14vh;
     }
 
 }
