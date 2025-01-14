@@ -225,7 +225,7 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 130vh 14vh;
+        grid-template-rows: 14vh 160vh 14vh;
     }
 
 
@@ -287,13 +287,46 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 120vh 14vh;
+        grid-template-rows: 14vh 152vh 14vh;
     }
 
 
 }
 
-@media (max-width: 426px) {
+@media (max-width: 529px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 158vh 14vh;
+    }
+
+
+}
+
+@media (max-width: 492px) {
+  
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 180vh 14vh;
+    }
+
+
+}
+
+
+@media (max-width: 425px) {
   
 
     #conteiner {
@@ -309,7 +342,7 @@ ul{
 
 }
 
-@media (max-width: 391px) {
+@media (max-width: 392px) {
   
 
     #conteiner {
@@ -319,9 +352,23 @@ ul{
             "corpo"
             "rodape";
         grid-template-columns: 100%;
-        grid-template-rows: 14vh 162vh 14vh;
+        grid-template-rows: 14vh 192vh 14vh;
     }
 
+
+}
+
+@media (max-width: 389px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 198vh 14vh;
+    }
 
 }
 
@@ -339,6 +386,62 @@ ul{
 
 }
 
+@media (max-width: 369px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 220vh 14vh;
+    }
+
+}
+
+@media (max-width: 362px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 233vh 14vh;
+    }
+
+}
+
+@media (max-width: 348px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 238vh 14vh;
+    }
+
+}
+
+@media (max-width: 332px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 245vh 14vh;
+    }
+
+}
+
 @media (max-width: 321px) {
 
     #conteiner {
@@ -349,6 +452,20 @@ ul{
             "rodape";
         grid-template-columns: 100%;
         grid-template-rows: 14vh 254vh 14vh;
+    }
+
+}
+
+@media (max-width: 298px) {
+
+    #conteiner {
+        grid-area: conteiner;
+        display: grid;
+        grid-template-areas: "cabecalho"
+            "corpo"
+            "rodape";
+        grid-template-columns: 100%;
+        grid-template-rows: 14vh 270vh 14vh;
     }
 
 }
