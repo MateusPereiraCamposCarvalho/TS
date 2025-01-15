@@ -30,8 +30,11 @@ function producaolixo() {
 
         if (recicla == 1) {
             var texto3 = document.querySelector(".invisivel3")
-            texto3.textContent = "Continue reciclando para diminuir ainda mais sua produção de lixo!"
+            texto3.textContent = "Aqui vai algumas dicas para te ajudar a continuar reciclando!"
             texto3.removeAttribute("class", "invisivel3")
+
+            var texto5 = document.querySelector(".invisivel5")
+            texto5.removeAttribute("class", "invisivel5")
         } else {
             var texto3 = document.querySelector(".invisivel3")
             texto3.textContent = "Aqui vai algumas dicas para começar a reciclar e diminuir sua produção de lixo:"
