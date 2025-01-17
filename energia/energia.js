@@ -23,9 +23,9 @@ function consumoluz() {
         var nome = []
         var tempo = []
         var simnao = []
-        ideal[0] = 200
-        ideal[1] = 400
-        ideal[2] = 600
+        ideal[0] = 300
+        ideal[1] = 500
+        ideal[2] = 700
         nome[0] = "O consumo de energia na residência para 1 ou 2 pessoas"
         nome[1] = "O consumo de energia na residência para 3 ou 4 pessoas"
         nome[2] = "O consumo de energia na residência para mais de 5 pessoas"
@@ -46,15 +46,15 @@ function consumoluz() {
         //geladeira
         var gela = document.querySelector('input[name="geladeira"]:checked').value
         if (gela == 1) {
-            simnao[0] = 1  
+            simnao[0] = 1
             var qntgeladeira = parseInt(document.getElementById("qgeladeira").value)
             var tmhgela = document.querySelector('input[name="tamgeladeira"]:checked').value
             if (tmhgela == 1) {
-                gasto[0] = 0.05 * qntgeladeira * 30 
+                gasto[0] = 0.05 * qntgeladeira * 30
             }
-            
+
             if (tmhgela == 2) {
-                gasto[0] = 0.06 * qntgeladeira * 30 
+                gasto[0] = 0.06 * qntgeladeira * 30
             }
 
             if (tmhgela == 3) {
@@ -72,15 +72,15 @@ function consumoluz() {
             var tipotv = document.querySelector('input[name="tamtv"]:checked').value
 
             if (tipotv == 1) {
-                gasto[1] = 0.03 * qnttv * 30
+                gasto[1] = 0.04 * qnttv * 30
             }
 
             if (tipotv == 2) {
-                gasto[1] = 0.05 * qnttv * 30
+                gasto[1] = 0.06 * qnttv * 30
             }
 
             if (tipotv == 3) {
-                gasto[1] = 0.04 * qnttv * 30
+                gasto[1] = 0.05 * qnttv * 30
             }
             tem[1] = true
         }
@@ -120,55 +120,57 @@ function consumoluz() {
             var tpcond = parseInt(document.getElementById("qar").value)
             var ptcond = parseInt(document.getElementById("potenciaar").value)
             var numar = parseInt(document.getElementById("numar").value)
-            gasto[5] = tpcond * ptcond * numar 
+            gasto[5] = tpcond * ptcond * numar
             tem[5] = true
         }
 
         //Lâmpadas
-            var tipolamp = document.querySelector('input[name="lampada"]:checked').value
-            var qntlamp = parseInt(document.getElementById("qar").value)
-            var tplamp = parseInt(document.getElementById("potenciaar").value)
-            tem[6] = true
+        var tipolamp = document.querySelector('input[name="lampada"]:checked').value
+        var qntlamp = parseInt(document.getElementById("qar").value)
+        var tplamp = parseInt(document.getElementById("potenciaar").value)
+        tem[6] = true
 
-            if (tipolamp == 1) {
-                gasto[6] = 0.3 * qntlamp * 30
-            }
-            
-            if (tipolamp == 2) {
-                gasto[6] = 0.1 * qntlamp * 30
-            }
-            
-            if (tipolamp == 3) {
-                gasto[6] = 0.04 * qntlamp * 30
-            }
+        if (tipolamp == 1) {
+            gasto[6] = 0.2 * qntlamp * 30
+        }
+
+        if (tipolamp == 2) {
+            gasto[6] = 0.1 * qntlamp * 30
+        }
+
+        if (tipolamp == 3) {
+            gasto[6] = 0.05 * qntlamp * 30
+        }
 
         //Fogão elétrico
         var fog = document.querySelector('input[name="fogao"]:checked').value
         if (fog == 1) {
-             var tpfog = parseInt(document.getElementById("qfog").value)
-             var ptfog = parseInt(document.getElementById("potenciafog").value)
-             gasto[7] = ptfog * tpfog
-             tem[7] = true
-        }    
-
-        for (i = 0; i < 8; i++){
-            aux += parseFloat(gasto[i])        
+            var tpfog = parseInt(document.getElementById("qfog").value)
+            var ptfog = parseInt(document.getElementById("potenciafog").value)
+            gasto[7] = ptfog * tpfog
+            tem[7] = true
         }
-        if(qntPessoas == 1 || qntPessoas == 2){
+
+        for (i = 0; i < 8; i++) {
+            if (tem[i] == true) {
+                aux += parseFloat(gasto[i])
+            }
+        }
+        if (qntPessoas == 1 || qntPessoas == 2) {
             if (aux > ideal[0]) {
                 consumo[0] = "ruim"
             } else {
                 consumo[0] = "bom"
             }
         }
-        if(qntPessoas == 3 || qntPessoas == 4){
+        if (qntPessoas == 3 || qntPessoas == 4) {
             if (aux > ideal[1]) {
                 consumo[0] = "ruim"
             } else {
                 consumo[0] = "bom"
             }
         }
-        if(qntPessoas >= 5){
+        if (qntPessoas >= 5) {
             if (aux > ideal[2]) {
                 consumo[0] = "ruim"
             } else {
@@ -182,46 +184,46 @@ function consumoluz() {
         if (qntPessoas == 1 || qntPessoas == 2) {
             var texto2 = document.querySelector("#texto2")
             if (consumo[0] == "ruim") {
-                    texto2.textContent = nome[0] + " está acima da média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
-                    texto2.setAttribute("class", "visivel")
+                texto2.textContent = nome[0] + " está acima da média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
+                texto2.setAttribute("class", "visivel")
             } else {
-                    texto2.textContent = nome[0] + " está na média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
+                texto2.textContent = nome[0] + " está na média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
             }
         }
         if (qntPessoas == 3 || qntPessoas == 4) {
             var texto2 = document.querySelector("#texto2")
             if (consumo[0] == "ruim") {
-                    texto2.textContent = nome[1] + " está acima da média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
-                    texto2.setAttribute("class", "visivel")
+                texto2.textContent = nome[1] + " está acima da média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
+                texto2.setAttribute("class", "visivel")
             } else {
-                    texto2.textContent = nome[1] + " está na média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
+                texto2.textContent = nome[1] + " está na média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
             }
         }
         if (qntPessoas >= 5) {
             var texto2 = document.querySelector("#texto2")
             if (consumo[0] == "ruim") {
-                    texto2.textContent = nome[2] + " está acima da média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
-                    texto2.setAttribute("class", "visivel")
+                texto2.textContent = nome[2] + " está acima da média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
+                texto2.setAttribute("class", "visivel")
             } else {
-                    texto2.textContent = nome[3] + " está na média recomendada pela ANEEL."
-                    texto2.removeAttribute("class", "invisivel")
+                texto2.textContent = nome[3] + " está na média recomendada pela ANEEL."
+                texto2.removeAttribute("class", "invisivel")
             }
         }
 
-        
+
         var texto3 = document.querySelector("#texto3")
         texto3.removeAttribute("class", "invisivel")
 
 
         var texto4 = document.querySelectorAll("li")
-        for (i = 0; i < 8; i++){
-            if (tem[i] == true){
-                texto4[i].textContent = nome2[i] + ":  " + gasto[i].toFixed(2) + "KWh"
+        for (i = 0; i < 8; i++) {
+            if (tem[i] == true) {
+                texto4[i].textContent = nome2[i] + ":  " + gasto[i] + "KWh"
                 texto4[i].removeAttribute("class", "invisivel")
             }
         }
