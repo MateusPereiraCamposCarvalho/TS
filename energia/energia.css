@@ -15,7 +15,7 @@ body {
         "corpo"
         "rodape";
     grid-template-columns: 100%;
-    grid-template-rows: 10vh auto 10vh;
+    grid-template-rows: 14vh auto 10vh;
 }
 
 #cabecalho {

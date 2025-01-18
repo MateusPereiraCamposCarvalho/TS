@@ -21,7 +21,7 @@ function producaolixo() {
         qntlixo = parseInt(qntlixo)
         var texto = document.querySelector(".invisivel")
         texto.removeAttribute("class", "invisivel")
-        texto.textContent = "Sua casa produz, em média, " + qntlixo + " kg de lixo por mês."
+        texto.textContent = "Sua produção média atual é de " + qntlixo + " kg de lixo por mês."
 
         var lixoano = ((qntlixo * 12) * 100) / 80000000
         var texto2 = document.querySelector(".invisivel2")

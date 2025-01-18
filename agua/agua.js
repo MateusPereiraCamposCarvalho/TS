@@ -42,8 +42,8 @@ function consumoagua() {
         var nome = []
         ideal[0] = 1650
         ideal[1] = 980
-        ideal[2] = 800
-        ideal[3] = 1350
+        ideal[2] = 950
+        ideal[3] = 1480
         ideal[4] = 350
         nome[0] = " com banhos"
         nome[1] = "  lavando roupas"

@@ -24,8 +24,8 @@ function consumoluz() {
         var tempo = []
         var simnao = []
         ideal[0] = 300
-        ideal[1] = 500
-        ideal[2] = 700
+        ideal[1] = 400
+        ideal[2] = 600
         nome[0] = "O consumo de energia na residência para 1 ou 2 pessoas"
         nome[1] = "O consumo de energia na residência para 3 ou 4 pessoas"
         nome[2] = "O consumo de energia na residência para mais de 5 pessoas"
@@ -50,15 +50,15 @@ function consumoluz() {
             var qntgeladeira = parseInt(document.getElementById("qgeladeira").value)
             var tmhgela = document.querySelector('input[name="tamgeladeira"]:checked').value
             if (tmhgela == 1) {
-                gasto[0] = 0.05 * qntgeladeira * 30
+                gasto[0] = 1 * qntgeladeira * 30
             }
 
             if (tmhgela == 2) {
-                gasto[0] = 0.06 * qntgeladeira * 30
+                gasto[0] = 1.2 * qntgeladeira * 30
             }
 
             if (tmhgela == 3) {
-                gasto[0] = 0.07 * qntgeladeira * 30
+                gasto[0] = 1.5 * qntgeladeira * 30
             }
             tem[0] = true
         }
@@ -72,15 +72,15 @@ function consumoluz() {
             var tipotv = document.querySelector('input[name="tamtv"]:checked').value
 
             if (tipotv == 1) {
-                gasto[1] = 0.04 * qnttv * 30
+                gasto[1] = 0.6 * qnttv * 30
             }
 
             if (tipotv == 2) {
-                gasto[1] = 0.06 * qnttv * 30
+                gasto[1] = 0.7 * qnttv * 30
             }
 
             if (tipotv == 3) {
-                gasto[1] = 0.05 * qnttv * 30
+                gasto[1] = 0.8 * qnttv * 30
             }
             tem[1] = true
         }
@@ -91,7 +91,7 @@ function consumoluz() {
             simnao[2] = 1
             var qcomp = parseInt(document.getElementById("qcom").value)
             var tpcomp = parseInt(document.getElementById("tempocom").value)
-            gasto[2] = 0.06 * qcomp * 30
+            gasto[2] = 0.5 * qcomp * 30
             tem[2] = true
         }
 
@@ -100,7 +100,7 @@ function consumoluz() {
         if (micro == 1) {
             simnao[3] = 1
             var tpmicro = parseInt(document.getElementById("qmicro").value)
-            gasto[3] = 0.05 * tpmicro * 30
+            gasto[3] = 0.5 * tpmicro * 30
             tem[3] = true
         }
 
@@ -126,20 +126,20 @@ function consumoluz() {
 
         //Lâmpadas
         var tipolamp = document.querySelector('input[name="lampada"]:checked').value
-        var qntlamp = parseInt(document.getElementById("qar").value)
+        var qntlamp = parseInt(document.getElementById("qlamp").value)
         var tplamp = parseInt(document.getElementById("potenciaar").value)
         tem[6] = true
 
         if (tipolamp == 1) {
-            gasto[6] = 0.2 * qntlamp * 30
+            gasto[6] = 0.3 * qntlamp * 30
         }
 
         if (tipolamp == 2) {
-            gasto[6] = 0.1 * qntlamp * 30
+            gasto[6] = 0.2 * qntlamp * 30
         }
 
         if (tipolamp == 3) {
-            gasto[6] = 0.05 * qntlamp * 30
+            gasto[6] = 0.07 * qntlamp * 30
         }
 
         //Fogão elétrico
@@ -223,7 +223,7 @@ function consumoluz() {
         var texto4 = document.querySelectorAll("li")
         for (i = 0; i < 8; i++) {
             if (tem[i] == true) {
-                texto4[i].textContent = nome2[i] + ":  " + gasto[i] + "KWh"
+                texto4[i].textContent = nome2[i] + ":  " + gasto[i].toFixed(2) + "KWh"
                 texto4[i].removeAttribute("class", "invisivel")
             }
         }
